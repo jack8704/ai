@@ -14,9 +14,13 @@ c:/ai/READ.md 파일(대문페이지)
 
 ●Deeplearning
 
-●Machinlearning
+●Machinelearning
 
+●LLM
 
+●flask
 
+●django
 
+●AWS
 

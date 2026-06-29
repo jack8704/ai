@@ -1,1 +1,56 @@
-1절. 
+3장 데이터구조 : 여러 데이터를 한 변수에 담는게 목적    # 4가지 type
+1절. 리스트 : [타입에 상관없이 0개이상의 데이터들]
+	1.1 리스트 생성 : [], list(나열가능한 자료)                               ex. list(range(from, to, step))
+	1.2 기본 정보 조회 
+		- min(lst), max(lst), sum(lst), len(lst)
+		- sorted(lst), sorted(lst,reverse=True) : 정렬된 lst를 반환
+  	   - lst.sort(), lst.sort(reverse=True): lst가 정렬된 값으로 변경	
+	   1.3 요소 추가
+	   -  lst.append(value), extend([values]), insert(idx, value)
+	   1.4 인덱싱과 인덱싱 찾기
+	   - lst[idx]
+	   - index(찾을 데이터) : 없는 데이터를 찾을 경우 error
+ 	 	- 찾을데이터 in lst : 찾을데이터가 있는지 여부 반환
+		- lst.count(찾을데이터) : 찾을데이터가 몇개인지 숫자 반환
+	1.5 원하는 요소 추출
+	   - 리스트컴프리헨션(원하는 데이터 추출)
+	   1.6 요소 수정 : 인덱싱이나 슬라이싱을 이용
+	   1.7 요소 삭제 : pop(), pop(idx), del[idx], remove(데이터)
+	   1.8 복제 : 복제할변수 = 원본데이터.copy()           #깊은복사
+
+2절. 튜플(리스트와 유사하나 수정불가)
+       수정불가로 생성/수정/삭제 하기 위한 함수 제공안됨
+       ex. append() / remove() / pop() / sort()
+
+3절. 딕셔너리 
+	- 중괄호({})를 이용해서 딕셔너리를 생성. 키(key)-값(value)쌍으로 구성된 자료구조
+	- 키는 유일한 값(중복X). 키에 문자, 숫자, bool, tuple 사용가능하나 대부분 문자를 사용
+	3.1 딕셔너리 만들기 dic ={'name':'홍길동','age':30}, 
+                                    dic = dict(name="홍길동", age=30)
+        3.2 딕셔너리 item 수정, 추가, 제거
+ 	     - 수정 및 추가
+		 하나씩 : my_favorite[''] ='' 입력
+                 한꺼번에 : .update()          ex.      my_favorite.update({'subject' : '수학', 'major': 'AI'})    
+             - 딕셔너리 item 제거
+		del 사용  ----- 변수 없는 key일 경우 에러    (에러없이 쓰려면 if 문으로 조건 제시 필요)
+	3.3 출력하기 (for문 이용)
+ 		.keys()  /  .values() / .items()
+                 ex. for value in my_dic.values() :
+	3.4 복제하기 : 복제할딕셔너리 = 원본딕셔너리.copy()           #깊은복사
+
+4절. 셋 : 중복을 허용하지 않는 집합(순서x)
+	4.1 셋 만들기 : {}나 set()함수를 이용해서 셋 생성 
+        4.2 추가하기 : add(), update()
+	4.3 삭제하기 : remove()
+	4.4 셋연산자 : &(교집합) |(합집합), -(차집합)
+
+
+
+5절. enumerate : 반복자 또는 순서객체로 반복문을 처리할 때 사용하는 함수
+  			(리스트, 튜플, 셋을 for문에 사용시)
+ 
+
+
+
+
+

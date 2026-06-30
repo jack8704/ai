@@ -1,0 +1,35 @@
+4장 제어문 : if문, for문, while문 ** 모두 중첩가능 *
+
+1절 조건문 if 중첩사용가능
+ 	if-조건이 참일경우 수행할 명령어
+	elif-if조건이 거짓이고 조건2가 참일경우 수행할 명령어
+	else 모든 조건이 만족하지 않을 경우 수행할 명령어
+
+2절 반복문 for / while
+	2.1 for-in 문 
+		for 임시변수 in 나열가능한 자료
+		    반복할 문장들
+		else for블록을 다 수행한 후, 최종 한번 실행
+	2.2 while 문
+		while   조건이 참일 경우 반복할 문장들
+		else 조건이 거짓일 경우 한번 실행할 문장(else 선택사항)
+	2.3 break, continue
+	 break 현재 반복문을 탈출     
+         continue 현재 반복문의 조건으로 가라
+
+3절 중첩루프 : 반복문 안에 반복문
+ 	ex)	for i in range() :
+   	             for j in range() : 
+
+4절 중첩루프 탈출
+  #중첩 루프 탈출 방법1 : flag 변수 이용
+     ex flag 변수를 False로 지정후 탈출할 시점에 if flag True일때 break로 탈출구 지정
+ #중첩 루프 탈출 방법2 : Exception(예외처리) 이용  ####나중에 배울 예정
+
+
+
+
+
+
+
+

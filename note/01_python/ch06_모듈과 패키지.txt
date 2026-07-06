@@ -1,0 +1,29 @@
+6장 모듈과 패키지4
+1절. 파이썬 표준 모듈 사용
+	- 모듈이나 모듈안의 함수를 가져오는 방법
+	import A               - A모듈을 가져옴   
+	import A as B          - A모듈을 B이름으로 가져옴  
+	from A import B        - A모듈안의 B함수(클래스|변수)를 가져옴
+	from A import B as C   - A모듈안의 B함수를 C이름으로 가져옴
+	- 패키지이나 모듈안의 함수를 가져오는 방법
+	from A import B        - A패키지 안의 B모듈을 가져옴
+	from A.B import C      - A패키지 안의 B모듈 안의 C함수 가져옴
+	from A import B as C   - A패키지 안의 B함수를 C이름으로 가져옴
+	from A.B import C as D - A패키지 안의 B모듈안의 C를 D이름으로 가져옴
+
+2절 사용자 정의 모듈
+	- 함수나 클래스나 변수 등을 파이썬 파일(*.py)에 저장해서 모듈을 만들고, 재사용 할 수 있음
+	- 모듈을 가져오는 순서 (1)표준모듈 (2)sys.path변수에 저장된 경로 (3)현재 실행하는 폴더
+
+
+3절 패키지 모듈(py)들이 들어있는폴더(__init__.py파일이 있어야한다)
+		*: __all__에 정의한 파일 로드 
+
+4절 패키지 설치 및 삭제 
+	아나콘다 프롬프트에서
+	- 패키지 설치 : pip install 패키지명[==버전] / conda install 패키지명[==버전] 
+  	  #안쓰면 최신버전 쓰면 쓰던 버전으로 로딩
+	- 패키지 확인 : pip show 패키지명 /conda list 패키지명
+	- 패키지 삭제 : pip uninstall 패키지명 /conda remove 패키지명
+
+

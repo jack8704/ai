@@ -16,4 +16,27 @@
 	- 딕셔너리매개변수 : **kwargs 여러개 키워드 인수를 딕셔너리 형태로 사용
 	- 언패킹(함수호출시) : 튜플인수언패킹(*) vs 딕셔너리인수언패킹(**) 
 	- 함수정의시 매개변수 순서
-		순서인수 > 튜플인수 > 키워드인수(기본값) > 딕셔너리인수
+		*순서인수 > 튜플인수 > 키워드인수(기본값) > 딕셔너리인수
+4절. 람다식
+	- lambda 매개변수 : 리턴값
+ 	- 용도 (1) 함수의 매개변수 사용 map / filter / sort 함수에 매개변수로 사용
+		 (2) 함수를 return 할때                       *잘안쓰임
+		ex1. map(func, 가공할 vector data)    #vector : list, tuple, 배열, 시리즈    (배열과 시리즈는 나중에 학습)
+		ex2. filter(func,추출할 vector data)
+		ex3. sort(key=정렬기준이 될 데이터를 return하는 함수, reverse=T/F)
+ 																  !!정정 **스칼라 data1개 백터 1차원 data 2개 2차원 데이터 matrix
+5절. 파이썬 내장함수
+	- import없이 사용가능하기에 예약어처럼 취급한다
+
+
+
+
+members1 = [{'name':' 홍길동 ', 'birth':'2000 01 01’},{'name':'신길동 ', 'birth':'1995 12 18'},]
+members2 = [{'name':'홍길동 ', 'year':2000, 'month':1,'day':1}, {'name':'신길동 ', 'year':1995, 'month':12, 'day': 변환
+
+
+
+
+
+
+

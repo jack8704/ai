@@ -1,0 +1,47 @@
+1장 개론  
+   - 웹과 HTML, CSS, JavaScript의 차이
+   - 프로그램 설치
+
+2장  HTML-I 
+ 	<head> : 웹화면 구성의 정보들을 담는공간  Style / 여백 / 컬러 등
+	<body> : 눈에 보이는 실제 컨텐츠를 담는공간 
+
+- 글자관련태그
+	<br>  줄바꿈
+	<a href> A태그 : 하이퍼링크를 정의
+	<h1></h1> headline 텍스트 지정으로 글자 굵고 크게 지정됨 (크기는 h1>h2>h3>h4>h5>h6)
+		※<>를 문자그대로 표현하고 싶다  ex)    <제목>  ->   &lt;제목&gt;
+	<i>이텔릭체 
+	<b>진하게 
+	<strong>진하게 
+	<sup>위첨자      
+	<sub>아랫첨자    
+	<ins>언더라인    
+	<del>delete라인 
+	<span>   <head><style> span{color:red;} 에 지정된 텍스트 색상 적용
+	<hr color="red" />  가로 red 선 지정 태그		
+
+- 목록관련태그
+	순서가 없는 목록 태그 <ul type="square"></ul>   type은 circle, square, disc 가능
+	순서가 있는 목록 태그 <ol type="i"></ol>   type은 1,a,A,i 가능
+
+- 표태그
+    <table>
+	<caption>표 제목
+	<tr>  : 행
+		<td>  : 열    ※<td>를 <th>로 지정하면 headline으로 가운데정렬과 bold 지정됨
+	<td colspan="2"> : 지정된 열 기준 2열 병합
+	<td rowspan="2"> : 지정된 행 기준 2행 병합
+
+- 이미지태그
+	<img src="ch02_img/sulhyun.jpg" alt="설현사진 450X326" /> 
+	<img src="ch02_img/sulhyun.jpg" alt="설현사진 450X326" width="50" height="100" />    
+	      - >     img src속성의 그림 원본 그대로. src파일이 없으면 alt 속성값 출력
+      		    ※ img 경로는 해당 html 파일 폴더내 있는 상대경로로 지정하며, 절대경로 지정 안됨   /   인터넷 웹 이미지 url 첨부하여 지정가능
+
+
+- 오디오태그
+	방법1 <audio src="ch02_sound/stevejobs1.mp3" preload="auto" controls="controls"><</audio>
+	방법2          <audio controls="controls" loop="loop" preload="auto">     오디오 옵션지정후 별도로 source 파일 지정
+       				 <source src="ch02_sound/stevejobs2.mp3" />
+       				 </audio>

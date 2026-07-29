@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+
+        }
+        footer{border-top: 1px solid gray;}
+        footer p {
+            margin: 0;
+            font-size: 10pt;
+            text-align: center;}
+        span{color:red;}
+        td,p, header{text-align: center;}
+        fieldset {
+            width: 400px;
+            margin: 0 auto;
+            border:1px solid gray;
+        }
+    </style>
+    <script>
+         function chk() {
+           if (frm.pw.value != frm.pwChk.value) {
+                alert('비밀번호를 확인하세요');
+                frm.pw.value = '';
+                frm.pwChk.value = '';
+                frim.pw.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+    <section>
+            <form name="frm" onsubmit="return chk()">
+                <fieldset>
+                    <legend>필수입력</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name"> 이 름<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="name"
+                                       placeholder="이름은 2글자 이상" 
+                                       pattern="[가-힣]+"
+                                       autocomplete="off" minlength="2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="id">아 이 디<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="text" name="id" id="id"
+                                       placeholder="ID는 4글자 이상" 
+                                       pattern="[a-zA-Z0-9가-힣]{4,}"
+                                       autocomplete="off" minlength="4" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="pw">비밀번호<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="password" name="pw" id="pw" required="required" minlength="1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="pwChk">번호확인<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="password" name="pwChk" id="pwChk" required="required" minlength="1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="tel">전화<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="text" name="tel" id="tel"
+                                       placeholder="xx-xxx-xxxx/000-0000-0000"
+                                       autocomplete="off"
+                                       pattern="0\01d{1,2}[\-]\d{3,4}[\-]\d{4}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">이메일<span>*</span></label>
+                            </td>
+                            <td>
+                                <input type="text" name="email" id="email"
+                                       placeholder="id@domain.com또는co.kr"
+                                       autocomplete="off"
+                                       pattern="\w[a-z0-9_]+@\w+(\.\w+){1,2}" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>추가 입력 사항</legend>
+                    <table>
+                        <tr>
+                            <td>결혼유 무</td>
+                            <td>
+                                <input type="radio" name="marry" value="married" />기혼
+                                <input type="radio" name="marry" value="No married" />미혼
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>자식</td>
+                            <td>
+                                <input type="checkbox" name="junior" value="son" /> 아들
+                                <input type="checkbox" name="junior" value="daughter" /> 딸
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>지역</td>
+                            <td>
+                                <select name="location">
+                                    <option value="경기">경기</option>
+                                    <option>강원</option>
+                                    <option>충청</option>
+                                    <option>전라</option>
+                                    <option>경상</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </fieldset>
+                <p>
+                    <input type="submit" value="가입" />
+                    <input type="submit" value="취소" />
+                </p>
+            </form>
+    </section>
+    <footer>
+        <p>서울시 관악구 신림로 364, 우장BD 503호</p>
+        <p>Copyright ⓒ XX All Rights reserved.</p>
+    </footer>
+</body>
+</html>

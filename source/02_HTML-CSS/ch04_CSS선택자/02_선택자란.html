@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * { /*전체선택자 = 페이지 초기화 용도*/
+            margin: 0; /*밖여백(위우하좌)*/
+            padding: 0; /*안여백(위우하좌)*/
+            color: indigo;
+            text-align: center;
+        }
+        header, nav, section, footer {
+            border: 1px, solid, gray;
+            width: 1000px;
+            margin: 20px auto;
+            padding: 5px 5px; /*안여백(위우하좌)*/
+        }
+        nav ul {overflow:hidden;}/*수평으로 하고픈 태그 부모단*/
+            nav ul li { /*블록형태그를 수평으로*/
+                float: left;
+                list-style: none;
+                width: 25%; /*230px*/
+                text-align: center;
+            }
+        section {
+            clear: both; /*float 속성을 지우고 싶을때*/
+            text-align:left;
+        }
+        
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <h1>oo주식회사</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>회사소개</li>
+                <li>서비스소개</li>
+                <li>고객센터</li>
+                <li>공지사항</li>
+            </ul>
+        </nav>
+        <section>
+            <p>선택자란 웹페이지의 특정부분을 선택하여, 태그의 속성을 변경하는 목적으로 사용</p>
+            <br />
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+
+
+        </section>
+        <footer>
+            <p>서울시 00구 00로</p>
+        </footer>
+    </body>
+</html>

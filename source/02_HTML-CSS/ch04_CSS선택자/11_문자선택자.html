@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0;
+          padding:0;
+        }
+        div#wrap{width:800px;
+                 margin: 10px auto;
+        }
+        #header{
+            border: 1px solid gray;
+            text-align : center;
+        }
+        #content {
+            padding: 30px 10px;
+            text-align: justify; /*텍스트 양쪽정렬*/
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{
+            color:blue;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #content p:nth-child(2)::first-letter,
+        #content p:nth-child(3)::first-letter{
+            font-size:1.5em;
+        }
+        #content p:nth-child(1) span{
+             font-size:1.5em;
+             color:red;
+        }
+        #content a{text-decoration:none; color:blue;}
+        #content a:after{
+            content : ' - 'attr(href); /*링크선택자*/
+        }
+        #content li:not(.web) a{/*부정선택자*/
+            background-color: yellow;
+
+        }
+
+        li{list-style:none;}
+        
+        #footer ul{
+            border-top :1px solid gray;
+            overflow:hidden;
+            text-align: center;
+        }
+        #footer ul li{float:left;
+                      padding : 15px;
+        }
+
+    </style>
+</head>
+<body>
+  <div id="wrap">
+      <div id="header">
+       <h1>제목이나 회사명</h1>
+      </div>
+      <div id="content">
+        <p><span>The</span> standard Lorem Ipsum passage, used since 1966</p>
+        <p>
+            Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+        </p>
+        <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+          </p>
+            <br />
+          <ul>
+              <li><a href="http://www.naver.com" target="_black">네이버</a></li>
+              <li class="web"><a href="http://www.daum.net">다음</a></li>
+              <li><a href="http://www.google.com">구글</a></li>
+              <li><a href="http://zum.com">줌</a></li>
+          </ul>
+      </div>
+      <div id="footer">
+          <ul>
+              <li><img src="ch04/logo.png" /></li>
+              <li><img src="ch04/address.png" /></li>
+          </ul>
+      </div>
+  </div>
+</body>
+</html>

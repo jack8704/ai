@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Skranji", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #container {
+            width: 1200px;
+            margin: 10px auto;
+            padding: 5px;
+            border: 1px solid gray;
+            position: absolute ;
+            z-index: 10;
+        }
+
+        #header, #nav, #section, #content, #banner, #footer {
+            text-align: center;
+            border: 1px solid gray;
+            margin: 5px;
+
+        }
+
+        #header, #footer {
+            line-height: 150px;
+            background-color: yellow;
+        }
+
+        #nav, #content, #banner {
+            padding: 5px;
+        }
+
+        #nav {
+            height: 150px;
+        }
+
+        #section {
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        #content, #banner {
+            float: left;
+        }
+
+        #content {
+            width: 73%;
+            height: 300px;
+        }
+
+        #banner {
+            width: 23.2%;
+            height: 300px;
+        }
+
+        ul {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            ul li {
+                background-color: pink;
+                width: 19%;
+                list-style: none;
+                float: left;
+                line-height: 60px;
+                margin: .5%;
+                font-size: 1.5em;
+            }
+
+                ul li:first-child {
+                    border-radius: 30px 0 0 30px;
+                }
+
+                ul li:last-child {
+                    border-radius: 0 30px 30px 0;
+                }
+
+        a {
+            text-decoration: none;
+            color: purple;
+        }
+        #img {
+            margin: 20px auto;
+            padding:5px;
+            width: 100%;
+            height: 65%;
+            background: url('ch05/sulhyun.jpg') no-repeat center;
+            background-size: 98%;
+            opacity: .2;
+            position: absolute;
+        }
+        #wrap {
+            width: 1210px;
+            height:1200px;
+            margin: 0 auto;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="img">
+        </div>
+        <div id="container">
+            <div id="header">
+                <h3>HEADER</h3>
+            </div>
+            <div id="nav">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="#1">menu1</a></li>
+                    <li><a href="#2">menu2</a></li>
+                    <li><a href="#3">menu3</a></li>
+                    <li><a href="#4">menu4</a></li>
+                    <li><a href="#5">menu5</a></li>
+                </ul>
+            </div>
+            <div id="section">
+                <div id="content">
+                    <h3>CONTENT</h3>
+                </div>
+                <div id="banner">
+                    <h3>BANNER</h3>
+                </div>
+            </div>
+            <div id="footer">
+                <h3>FOOTER</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

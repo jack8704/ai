@@ -1,0 +1,36 @@
+5장 CSS 속성들
+1.	CSS3 단위들: em(배), %, px, pt(3pt=4px)
+2.	url()함수를 이용한 background-image, 로컬 폰트 지정 
+		background: url('ch05/sulhyun.jpg') no-repeat center;
+		background-size: 120%;
+
+3.	display : inline, block, inline-block, none
+		display:none : 안보이게(공간도 없어짐)
+		display:inline : span태그 (높이 속성없음)
+		display:block :div태그 p태그 li태그(높이 속성있음)
+		display: inline-block : block의 속성을 갖고 옆으로 붙여 나가는 것
+
+4.	visibility
+		visibility:hidden은 공간은 확보, 안보임( display:none은 공간도 사라짐)
+
+5.	opacity
+		opacity 속성 : 투명도를 조절하는 속성. 여러 곳에 유용하게 사용된다
+			0(투명) ~ 1(불투명)
+
+6.	margin과 padding
+
+7.	boxing-sizing ; border를 box안으로(margin으로 px계산하기 어려울때 사용)
+	           box-sizing:border-box;
+8.	글자관련 속성; font-family, font-size, font-weight, font-style,
+                      line-height, text-align, text-decoration
+9.	폰트(웹폰트, 로컬폰트, 시스템 폰트)
+		웹폰트 fonts.google.com 
+		로컬폰트    <style> font-family: "NanumHimNae";
+           			 src: url('ch05/NanumHimNaeRaNeunMarBoDan.ttf');
+				 ㄴ 지정후 태그지정 font-family: "NanumHimNae",'Times New Roman', Times, serif; /*로컬폰트,시스템폰트*/
+
+10.	float
+#contain1 img{float:left; margin:20px 20px 0 0;/*상우하좌*/}
+
+
+※ 영문글일경우 글 정렬 : text-align : justify

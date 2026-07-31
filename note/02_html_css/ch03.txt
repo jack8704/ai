@@ -1,0 +1,35 @@
+3장 Form 공간분할
+form태그 
+	<form> : 사용자에게 입력 받는 공간
+	<action> : 전달 위치를 지정
+	<button> : 버튼을 생성
+ 	<checkbox> : 체크박스을 생성
+	<file> : 파일 입력 양식을 생성
+	<hidden> : 보이지 않게
+	<image> : 이미지 형태를 생성
+	<password> : 비밀번호 입력 양식을 생성
+	<radio> : 라디오 버튼을 생성
+	<reset> : 초기화 버튼을 생성
+	<submit> : 제출 버튼을 생성
+	<text> : 글자 입력 양식을 생성
+
+공간분할태그
+<table><tr><td>  <th>: 헤드라인 적용으로 가운데정렬 and bold
+
+
+script 함수
+
+<head>
+	<script>
+	function chk() {}
+		if(조건){ 실행문}	
+<body>
+	<form name="frm" onsubmit="return chk()">
+
+	.trim() ==python의 strip
+	*표내 가로선만 border line 적용시 border-collapse:collapse; 적용필요
+	placeholder="확인용 비번" : 입력전 적용문구
+	autocomplete="off"  :자동완성 안됨
+	required="required" :필수입력항목 
+	minlength="2" : 최소글자 항목
+	pattern="[가-힣]+" 입력패턴 양식 *정규표현식 참조할것

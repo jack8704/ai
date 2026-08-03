@@ -8,13 +8,13 @@
         function chk() {
             if (frm.id.value.trim().length < 4) {
                 alert('아이디는 4글자 이상 필수입력입니다.');
-                frim.id.focus();
+                frm.id.focus();
                 return false;
             }
             else
                 if (frm.pw.value.trim().length < 4) {
                 alert('비밀번호는 4자리 이상 필수입력입니다.');
-                frim.pw.focus();
+                frm.pw.focus();
                 return false;
             }
                 else
@@ -22,7 +22,7 @@
                 alert('비밀번호를 확인하세요');
                 frm.pw.value = '';
                 frm.pwChk.value = '';
-                frim.pw.focus();
+                frm.pw.focus();
                 return false;
             }
             return true;

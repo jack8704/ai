@@ -1,0 +1,24 @@
+3장 조건문
+3.1	If 조건문
+
+3.2	If else 조건문
+
+3.3	중첩 조건문
+
+3.4	If else if 조건문
+
+3.5	switch 조건문
+	switch(비교할 값) {
+		case 값: 
+			문장; break;
+		case 값: 
+			문장; break;
+		Default:
+			문장; break;}
+
+※ 삼항연산자 :  변수 = (조건)?  참일때실행식 : 거짓일때실행식;
+		let difference =(num1>num2) ? num1-num2 : num2-num1;
+
+		let msg = (num1>num2)? `첫번째 수가 ${difference}만큼 더크다` : 
+                (num2>num1)? `두번째 수가 ${difference}만큼 더크다` : '두 수는 같다';
+

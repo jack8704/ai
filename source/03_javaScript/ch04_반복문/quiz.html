@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        var cnt=0;
+        var ng=0;
+        var g=0;
+        var gsum=0;
+        while(confirm('누적할래?')){
+            cnt++;
+            var suStr = prompt('누적할점수?');
+            var su = Number(suStr);
+            if(!suStr ||!suStr.trim() || isNaN(su) || su<0){
+                ng += 1;
+            }else{
+                g += 1;
+                gsum += su;
+            }
+        }
+        document.write(`${cnt}번 입력<br>`)
+        document.write(`누적점수 : ${gsum}<br>`)
+        document.write(`점수를 제대로 입력한 횟수: ${g}<br>`);
+        document.write(`점수를 잘못 입력한 횟수: ${ng}<br>`);
+    // 횟수카운트 +1
+    // 누적할 점수에 대한 prompt 입력창
+    // if 조건으로 제대로된 숫자일 경우 점수누적 및 Good 횟수 +1
+    // else경우  No Good +1
+    // number입력시 ''-> 0   '   '-> 0로 처리됨
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

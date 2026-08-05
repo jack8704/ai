@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    <style>
+    *{text-align : center;}
+    fieldset{width:400px;
+            margin: 0 auto;}
+    input[type="submit"]{width:100px;
+    height:50px;
+    background-color: lightgray; 
+    font-size: 1.5em;    
+    font-weight: bold;               
+    }
+    
+    </style>
+    <script>
+    function chk(){
+    let num1 = parseInt(frm.su1.value);
+    let num2 = parseInt(frm.su2.value);
+    if(isNaN(num1) || isNaN(num2) ){
+        alert('두칸 모두 숫자를 입력하세요');
+    }
+    else{
+        let difference =(num1>num2) ? num1-num2 : num2-num1;
+        let msg = (num1>num2)? `첫번째 수가 ${difference}만큼 더크다` : 
+                (num2>num1)? `두번째 수가 ${difference}만큼 더크다` : '두 수는 같다';
+        let msg2 = (num1>num2)? `첫번째 수가 ${difference} 큽니다` : 
+                (num2>num1)? `두번째 수가 ${difference} 큽니다` : '두 수는 같습니다';
+    alert(msg);
+    document.body.innerHTML += `<h3>${msg2}</h3>`
+    frm.su1.value=num1
+    frm.su2.value=num2
+    }
+    return false;
+    };
+
+
+    </script>
+</head>
+<body>
+<form name="frm" onsubmit="return chk()">
+<fieldset>
+    <p>첫번째수 : <input type="number" name="su1"></p>
+    <p>두번째수 : <input type="number" name="su2"></p>
+    <p><input type="submit" value="결과"></p>
+</fieldset>
+</form>  
+</body>
+</html>

@@ -9,23 +9,23 @@
     </style>
     <script>
 var variable;
-document.write('1.variable 타입:',typeof(variable),'-값:',variable);
+document.write('1.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 //variable = "이름은 \"홍길동\"입니다";
 let name = '홍길동';
 variable = `이름은 '${name}'입니다`;
-document.write('2.variable 타입:',typeof(variable),'-값:',variable);
+document.write('2.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = -3.2323;
-document.write('3.variable 타입:',typeof(variable),'-값:',variable);
+document.write('3.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = false;
-document.write('4.variable 타입:',typeof(variable),'-값:',variable);
+document.write('4.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = function(){
     alert('Hello');
 };
-document.write('5.variable 타입:',typeof(variable),'-값:',variable);
+document.write('5.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = null; //type은 object
-document.write('6.variable 타입:',typeof(variable),'-값:',variable);
+document.write('6.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = {'name':'홍길동','age':20}; //객체
-document.write('7.variable 타입:',typeof(variable),'-값:',variable);
+document.write('7.variable 타입:',typeof(variable),'-값:',variable,'<br>');
 variable = ['홍길동',20,function(){},true,[1,2],{'name':'홍길동'}]; //배열        
     </script>
 </head>

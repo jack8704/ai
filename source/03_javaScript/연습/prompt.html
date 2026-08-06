@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+    var suStr = prompt('점수를 입력하세여',"0");
+    if(!suStr){
+        alert('점수를 입력하세여')
+    }else{
+        let su = Number(suStr);
+        document.write(`입력한 점수: ${su} 타입: ${typeof(su)} <br>`);
+        if(isNaN(su)){
+            alert('점수를 입력하세여'); 
+        }else{
+            result = su>80 ? '잘했어요':'노력하세요'
+            document.write(result);
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -30,6 +30,7 @@
         let msg2 = (num1>num2)? `첫번째 수가 ${difference} 큽니다` : 
                 (num2>num1)? `두번째 수가 ${difference} 큽니다` : '두 수는 같습니다';
     alert(msg);
+    document.body.style= 'background-color: orange'; 
     document.body.innerHTML += `<h3>${msg2}</h3>`
     frm.su1.value=num1
     frm.su2.value=num2
@@ -38,15 +39,18 @@
     };
 
 
+
+
     </script>
 </head>
 <body>
 <form name="frm" onsubmit="return chk()">
 <fieldset>
     <p>첫번째수 : <input type="number" name="su1"></p>
-    <p>두번째수 : <input type="number" name="su2"></p>
+    <p>두번째수 : <input type="numbear" name="su2"></p>
     <p><input type="submit" value="결과"></p>
 </fieldset>
-</form>  
+</form>
+ 
 </body>
 </html>

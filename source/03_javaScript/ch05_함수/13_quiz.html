@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title></title>
+    
+    <style>
+        body{
+            background-image: url(ch05_img/img01.png);
+            background-size: 100%;
+            font-size:3em;
+            color:yellow;
+        }
+
+
+    </style>
+    <script>
+        // 1초마다 10초동안 body의 백그라운드 이미지가 바뀌고 시간이 출력  
+        let sec = 0;
+        const color =['yellow', 'blue', 'white'];
+        const img =['url(ch05_img/img01.png)',
+                    'url(ch05_img/img02.png)',
+                    'url(ch05_img/img03.png)'];
+        document.write(`${new Date().toLocaleString()} - ${sec}초 지남`) ;
+        var id = setInterval(() => {
+                sec += 1;
+                document.body.style.backgroundImage = img[sec%3];
+                document.body.style.color = color[sec%3];
+                document.body.innerHTML= `${new Date().toLocaleString()} - ${sec}초 지남` ;
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(id);
+        }, 10000);
+
+        //img01.png(노란색), img02.png(파란색), img03.png(하얀색)
+        // 몇초가 지났는지 저장변수
+        //1초에 한번씩 작업
+        //document.write(`${new Date().toLocaleString()} - ${sec}초 지남`);
+        //document.body.style=`background-image: ${img[sec%3]}`;
+        //document.body.style.backgroundImage = img[sec%3]; 씀
+        //document.body.style.color = color[sec%3]; 씀
+        // 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

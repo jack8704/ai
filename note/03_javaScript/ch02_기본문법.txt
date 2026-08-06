@@ -1,0 +1,27 @@
+2장 기본문법
+
+자료형(string, number, boolean, object(array), function, undefined)
+내장함수(alert, prompt, confirm) cf. https://www.w3schools.com/jsref, http://devdocs.io/javascript
+
+
+
+var : 변수 선언시 사용. 변수의 재선언 가능. 전역변수로 사용
+let : 변수 선언시 사용. 변수의 재선언 불가. 블록 레벨 scope 적용(지역변수)
+const : 새로운 값을 재할당 불가
+
+
+document.body.innerHTML += list;  
+    -->       HTML 내에 body부분 뒷쪽 list 추가
+
+*false로 해석되는 값: 0, NaN, undefined, null, ''      
+
+console.log(Boolean(i)); --> false
+console.log(Boolean(0)); --> false
+console.log(Boolean(NaN)); --> false
+console.log(Boolean(null)); --> false
+console.log(Boolean("")); --> false
+console.log(Boolean([]));   --> true
+console.log(Boolean("  "));   --> true
+
+    document.write(('' == false) +'==은 양변의 값이 일치할 경우 true <br>');
+    document.write(('' === false)+'===은 양변의 자료형과 값이 일치할 경우 true<br>');

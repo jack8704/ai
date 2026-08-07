@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+<title></title>
+<script>
+//객체배열
+    let students=[{'name':'김','kor':99,'mat':98,'eng':91},
+                {'name':'이','kor':93,'mat':88,'eng':96},
+                {'name':'박','kor':97,'mat':75,'eng':93},
+                {'name':'정','kor':94,'mat':68,'eng':92},
+                {'name':'윤','kor':91,'mat':78,'eng':85},];
+for (let idx in students){
+    students[idx].getSum=function(){
+        return this.kor + this.mat + this.eng;
+    };
+    students[idx].getAvg=function(){
+        return Math.round(this.getSum() /3*10)/10; //소숫점 첫번째 자리에서 반올림
+    };
+    students[idx].toString=function(){
+    let output='';
+        for(let key in this){
+            if (key!='getSum' && key!='getAvg' && key!='toString'){
+                output += key + ':' + this[key] + ' &nbsp; '; 
+            }else if(key=='getSum' || key=='getAvg'){
+                output += key.substring(3).toUpperCase() + ':' +this[key]()+ ' &nbsp;';  //3번째 글자부터  대문자로
+            }//if
+        }; //for
+    return output;
+    }//toString
+
+}//for
+document.write('<h4>1. 일반 for문</h4>')
+for(let idx=0; idx<students.length;idx++){
+    document.write(`${idx}번째 ${students[idx]}<br>`)
+}
+
+document.write('<h4>2. for in 문</h4>')
+for(let idx in students){
+    document.write(`${idx}번째 ${students[idx]}<br>`)
+}
+
+document.write('<h4>3. for of 문</h4>')
+for(let student in students){
+    document.write(`${students[student]}<br>`)
+}
+document.write('<h4>4. forEach 함수</h4>')
+students.forEach((element,idx) => document.write(`${idx}번째 ${element}<br>`));
+
+document.write('<h4>5. forEach 함수</h4>')
+students.forEach(element => document.write(`${element}<br>`));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+6장_객체
+	객체개요
+		- 연관된 변수와 함수를 그룹핑하고 이름을 붙임
+		obj={'name':'홍길동', 'age':20}; // 객체에서는 key가 속성변수  
+		obj.address = '신림동';  -----> 객체 속성 추가
+		delete(obj.age);  ----->객체 속성 제거
+	
+	속성과 메소드(함수형 자료형)
+		let person = {'name':'홍길동', 'age':20, 
+    			          'eat':function(food){let msg = `${this.age}살 ${this.name}님은 ${food}를 먹습니다`;
+       				  alert(msg);},};
+				---> 속성중 'eat'이 메소드

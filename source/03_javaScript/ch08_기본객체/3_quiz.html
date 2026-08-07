@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table {width:350px; margin:20px auto; padding:20px 10px;}
+    table, input[type='text'], input[type='password'] {
+        border: 1px solid #385d81;
+outline: 1px solid #385d81;
+        padding: 2px;
+    }
+    input[type='submit'], input[type='reset'], input[type='button'], button{
+        background-color: #385d81;
+        border:0; outline:0;
+        color:white; 
+        border-radius: 3px;
+        padding:10px 20px;
+        margin:5px;
+    }
+    td, th { padding:5px 10px; text-align:center;}
+  </style>
+  <script>
+    //메일은 필수 입력사항은 아니나, 올바른 메일 형식이여야하고 
+    //비밀번호는 알파벳, 숫자, 특수문자 섞어서 4글자 이상
+    //비밀번호 두개는 같아야한다
+    const joinCheck = () => {
+    // 패턴들(숫자, 알파벳, 특수문자) 길이가 4개이상
+    // 이메일 정규 표현식 패턴, 이름 정규표현식패턴
+    var patternNum = /[0-9]/; //숫자 패턴
+    var patternEng = /[a-zA-Z]/; // 알파벳 패턴
+    var patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; //특수문자패턴
+    var patternEmail =/^\w[a-z0-9_]+@\w+(\.\w+){1,2}$/; //이메일패턴
+    var patternName = /^[가-힣][가-힣]+$/;
+    var name = frm.name.value.trim();
+    var mail = frm.mail.value.trim();
+    var pw = frm.pw.value.trim();
+    var pwChk = frm.pwChk.value.trim();
+    //------------------------이름 유효성 검사
+        if (name.length < 2){
+            alert('이름은 두글자 이상 입력하세요')
+            frm.name.value = '';
+            return false;
+        }else{
+            if (!name.match(patternName)){
+                alert('이름은 두글자 이상 한글외에 입력불가(숫자x,특수문자x, 영어x)')
+                frm.name.value = '';
+                return false;
+            }//name pattern if문
+        }//name if문
+    //------------------------메일 유효성 검사
+        if(mail){
+            if (!mail.match(patternEmail)){
+            alert('올바른 메일형식으로 입력하세요')
+            frm.mail.value = '';
+            return false;
+            }//email pattern if문
+        }//email if문 입력여부확인
+    //------------------------비밀번호 양식 유효성 검사
+        if (pw.length < 4){
+            alert('비밀번호는 4글자이상 입력하세요')
+            return false;
+        }else{
+            if (!patternEng.test(pw) || !patternSpe.test(pw) ||!patternNum.test(pw) ){
+                alert('비밀번호는 1개이상의 알파벳/숫자/특수문자가 포함되어야 합니다)')
+                return false;
+            }//pw pattern if문
+        }//pw if문
+    //------------------------비밀번호 양식 유효성 검사
+        if (pw != pwChk) {
+                alert('비밀번호를 확인하세요');
+                frm.pw.value = '';
+                frm.pwChk.value = '';
+                return false;
+        }//pw 일치 if문
+    }//joinCheck
+
+    
+
+
+
+  </script>
+</head>
+<body>
+  <form action="#" name="frm" onsubmit="return joinCheck()">
+    <table>
+      <tr>
+        <th>이름</th>
+        <td>
+          <input type="text" name="name" placeholder="특수문자와 숫자 못 와" 
+                        autofocus="autofocus" required="required"/>
+        </td>
+      </tr>
+      <tr>
+        <th>메일</th>
+        <td><input type="text" name="mail" placeholder="메일 형식에 맞추세요" /></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pw" placeholder="특수문자,알파벳,숫자 포함" required="required"/></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pwChk" required="required"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="회원가입" />
+          <input type="reset" value="취소" />
+          <input type="button" value="로그인" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

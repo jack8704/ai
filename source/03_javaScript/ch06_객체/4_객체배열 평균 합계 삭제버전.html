@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+<title></title>
+<script>
+//객체배열
+    let students=[{'name':'김','kor':99,'mat':98,'eng':91},
+                {'name':'이','kor':93,'mat':88,'eng':96},
+                {'name':'박','kor':97,'mat':75,'eng':93},
+                {'name':'정','kor':94,'mat':68,'eng':92},
+                {'name':'윤','kor':91,'mat':78,'eng':85},];
+for (let idx in students){
+    students[idx].toString=function(){
+    let output='';
+        for(let key in this){
+            if (key!='toString'){
+                output += key + ':' + this[key] + ' &nbsp; '; 
+            }
+        }; //for
+    return output;
+    }//toString
+}//for
+document.write(students +'<hr>');
+</script>
+</head>
+<body>
+    
+</body>
+</html>

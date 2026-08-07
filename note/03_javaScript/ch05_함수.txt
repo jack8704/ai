@@ -1,4 +1,4 @@
-4장 함수
+5장 함수
 
 1. 익명함수
 	var functionVar = function() { }; // 함수 표현식

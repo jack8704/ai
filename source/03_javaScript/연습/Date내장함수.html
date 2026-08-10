@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <script src="dateGetDay.js"></script>
+  <script>
+  let now = new Date();
+  document.write(now +'<br>');
+  document.write('월:'  + (now.getMonth()+1)+'월<br>');
+  let openday= new Date(2026, 5, 22, 9, 30, 0);
+  document.write('개강시점: ' + openday.toLocaleString()+'<br>');
+  let day = now.getNumberOfDays(openday);
+  document.write(day + '일 지남<br>');
+
+  
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

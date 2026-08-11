@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+  #wrap {width:450px; margin: 0 auto;}  
+  </style>
+  <script>
+    var idChk;
+    window.onload= ()=>{
+      var openerId = opener.document.getElementById('id').value;
+      idChk.innerHTML = openerId;
+    };
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <p>ID <input type="text" id="idChk"><button>체크</button></p>
+    <button>아이디사용</button>
+  </div>
+</body>
+</html>

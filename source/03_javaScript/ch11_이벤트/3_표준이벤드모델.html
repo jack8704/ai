@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    h1{cursor: pointer;}
+  </style>
+  <script>
+    // DOM이 로드된후 실행
+      document.addEventListener('DOMContentLoaded', function(){
+      var header = document.getElementsByTagName('h1')[0];
+      header.addEventListener('click',function(){
+        this.innerHTML ='click했네(표준이벤트 모드)'; // this는 이벤트가 발생된 엘리먼트 객체
+        this.style.color = 'red';
+        this.style.border ='1px solid orange';
+      });
+    
+    });
+    //   ㄴwindow.onload =function(){} 과 같다 
+    //window.addEventListener('load', function(){});
+
+  </script>
+</head>
+<body>
+  <h1>click 해봐</h1>
+</body>
+</html>

@@ -16,45 +16,27 @@
 			document.querySelector('input[name=id]').addEventListener('keyup',function(){
 				let id = this.value;
 				if(id.length<3){
-					document.querySelector('#idConfirmResult').innerHTML='id는 3글자 이상입니다';		
+					document.querySelector('idConfirmResult').innerHTML='id는 3글자 이상입니다';		
 				}else{
-					let params =new URLSearchParams({id:id});
-          fetch(`midConfirmNonExists.html?${params}`,{method:'get'})
-          .then(response=>{
-            if(!response.ok){
-              throw new Error('서버 응답 오류'+ response.status);
-            }
-            return response.text(); // 응답결과의 text만 전달
-          })
-          .then(data=>{
-            document.querySelector('#idConfirmResult').innerHTML = data.trim();
-          })
-          .catch(error=>{
-            alert(error.message);
-          });//fetch
+					let params = new URLSearchParams({id:id}); 
+					fetch(`midConfirmNonExists.html?${params}`,{method:'get'})
+					.than(response=>{
+						if(!response.ok){
+							throw new Error('서버 응답 오류'+ response.status);
+						}
+						return response.text();
+					})
+					.than(data=>{
+						document.querySelector('idConfirmResult').innerHTML=data.trim();
+					})
+					.catch(error=>{
+						alert(error.message);
+					});
 				}//if
-			});//keyup
+			})//keyup
 			//------------------------------------------
 			// 2. 두 비밀번호 일치 확인 (keyup이벤트)
 			//------------------------------------------
-			document.querySelector('input[name=pw]').addEventListener('keyup',()=>{
-        let pw = document.querySelector('input[name=pw]').value;
-				let pwChk = document.querySelector('input[name=pwChk]').value;
-        if(pw.length<3){
-          document.querySelector('#pwChkResult').innerHTML = 'pw는 6글자 이상입니다';
-        }else{
-					if(pw!=pwChk){	
-						document.querySelector('#pwChkResult').innerHTML = '패스워드가 일치하지 않습니다.다시확인하세요';
-					}else{
-						document.querySelector('#pwChkResult').innerHTML = '패스워드가 일치합니다';
-					}//pwChk if
-				}//if
-			});//keyup
-
-
-
-
-
 			//------------------------------------------
 			// 3. 유효성 검사 (form의 submit 이벤트 제한)   11장 7_이벤트제한(표준이벤트).html 참조    
 			// #idConfirmResult에 ('사용가능한 id입니다')와

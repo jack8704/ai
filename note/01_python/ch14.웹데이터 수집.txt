@@ -1,0 +1,55 @@
+웹데이터 수집 (정적)
+	1절. BeautifulSoup과 parser
+ 		 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+	import requests #HTTP요청 처리하는 lib
+	from requests_file import FileAdapter
+	from bs4 import BeautifulSoup
+	from urllib.request import urlopen, Request
+	from urllib.parse import quote #ASCII 코드 처리해주는 라이브러리
+
+	response.status_code
+					#200:정상
+					#404:없는페이지
+	#1 soup.select_one('선택자') : 해당 선택자 처음 하나 엘리먼트만 (태그 전체를 가져옴 텍스트만 가져오는게 아님)
+	# 2.soup.select('선택자') : 해당 선택자 엘리먼트 다 list로
+	# 3.soup.find('태그', 속성) vs soup.select_one('선택자') : 해당 속성을 갖은 태그 처음 하나만
+	# 4.soup.find_all('태그', 속성) vs soup.select('선택자') : 해당 엘리먼트 다 list로 
+
+	2절. 정적 웹데이터 수집(정적 웹크롤링)
+		BeautifulSoup 모듈을 활용한 html 웹데이터 수집
+		open API사용: json웹데이터 수집
+		XML웹데이터 수집
+
+
+
+
+
+웹데이터 수집 (동적)
+	selenium 이용한 동적 웹크롤링 문법 
+		https://selenium-python.readthedocs.io/ 
+	아나콘다 프롬프트에 pip install selenium 설치
+
+	# 동적 웹크롤링 기본 라이브러리
+	from selenium import webdriver
+	from selenium.webdriver.common.by import By
+	from selenium.webdriver.common.keys import Keys
+	from bs4 import BeautifulSoup
+	import time        
+
+	명령어 XX=webdriver.Chrome() #  ----- 크롬 브라우저를 제어 명령어
+		  XX.get('http://python.org')  ----- 대상 사이트 오픈
+		  XXX = XX.find_element(By.NAME, 'q')   ------name으로 element 찾기 
+			#By.CLASS_NAME,By.ID,By.CSS_SELECTOR,By.TAG_NAME
+			#a태그에서 By.LINK_TEXT(찾을 문자 모두를 입력),  By.PARTIAL_LINK_TEXT(찾을 문자의 일부/  중 첫번째 요소)
+		  XXX.clear()  input 창에서 입력되어있는 문자 삭제(input 창만 사용가능)
+		  XXX.send_keys(Keys.CONTROL,'a')    (ctrl+a  input창 외에서 사용가능) 
+		  XXX.send_keys(Keys.RETURN)  #엔터를 리턴
+
+		from urllib.parse import urlparse   XX.current_url 현재url을 출력'
+	
+	파일 읽어오기
+	with open('data/ch14_맞춤법검사전.txt','r', encoding='utf-8') as fp:
+    		text =fp.read()
+	파일로 저장하기
+	with open('data/ch14_자동화영어번역본.txt','w',encoding='utf-8') as fp:
+     		fp.write(output_elems)

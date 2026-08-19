@@ -1,0 +1,33 @@
+1_2장 SELECT문 	
+	SELECT : 원하는 컬럼 선택
+	*: 테이블의 모든 column 출력
+	AS : 해당 column에 다른 이름 부여
+	FROM  : 불러오는 데이터
+	WHERE : 조건 	비교연산자 - 같다(=), 다르다(!=, ^=, <>), >, <, >=, <=
+	DISTINCT: 중복 행 제거 옵션
+ 	ORDER BY: 정렬(ASC :오름차순 생략가능, DECS 내림차순)   *정렬항목은 우선순위로 여러항목 사용가능
+	
+	SELECT * FROM TAB; --scott이 소유하고 있는 table을 전부 보여줌
+	DESC XXX;          -- XXX테이블의 구조보기
+	SELECT * FROM XXX -- XXX테이블 데이터 전체 보기
+	
+	연결연산자(||) : 필드나 문자를 연결				 EX)  SELECT ENAME || '의 연봉은' || (SAL*12+NVL(COMM, 0)) || '$입니다
+	SQL 연산자(BETWEEN, IN, LIKE, IS NULL)
+		-BETWEEN
+			필드명 BETWEEN A AND B : 필드명이 A부터 B까지 (A,B포함)
+			필드명 NOT BETWEEN A AND B : 필드명이 A미만  B초과 (A,B 미포함)
+		- IN
+			필드명 IN (값1, 값2, ..............값N) : 필드명이 값1이거나 값2이거나,...값N인 경우
+    			필드명 NOT IN  (값1, 값2, ..............값N) : 필드명이 값1이 아니거나 값2이 아니거나,...값N이 아닌 경우
+		-LIKE 
+			필드명 LIKE 패턴  : %(0글자이상), _(한글자)를 포함된 패턴
+		-IS NULL
+			IS NULL (NULL인지를 검색할 때)
+
+ 	**형변환 함수
+    		날짜형 -> 문자형 : TO_CHAR(날짜형,'패턴')
+              			         YYYY(년도4자리) RR(년도2자리) YY(년도2자리) MM(월2자리) DD(일2자리) DY(수) DAY(수요일)
+           	    	                 HH24, HH12, AM이나 PM, MI(분), SS(초)
+    		숫자형 -> 문자형 : TO_CHAR(숫자형, '패턴') EX'9,999'
+    		문자형 -> 날짜형 : TO_DATE('2026-08-19','YYYY-MM-DD')
+    

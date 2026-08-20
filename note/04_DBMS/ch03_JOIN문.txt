@@ -1,0 +1,28 @@
+3장 JOIN문 	
+ 2개 이상의 테이블을 연결하여 데이터를 검색하는 방법
+   1) Equi Join : 동일한 컬럼을 기준으로 조인
+	­   ※ 두 테이블 공통으로 존재하는 컬럼은  컬럼명 앞에 테이블명 지정해줘야 ERROR 없음
+    EX) DEPTNO 컬럼을 JOIN
+    SELECT EMPNO, ENAME, JOB, MGR, E.DEPTNO, DNAME
+      FROM EMP E, DEPT D
+      WHERE E.DEPTNO = D.DEPTNO;
+	
+
+   2) Non-Equi Join : 동일한 컬럼없이 다른 조건을 사용하여 조인
+   
+   EX) SAL 범위로 GRADE 컬럼을 JOIN
+   SELECT EMPNO, ENAME, JOB, MGR, SAL, GRADE||'등급' GRADE
+     FROM EMP, SALGRADE
+     WHERE SAL BETWEEN LOSAL AND HISAL;
+
+   3) Self Join : 한 테이블 내에서 조인.
+   EX) 동일한 테이블을 한번더 JOIN  / 컬럼 사용시 테이블명을 지정해줘야함
+    SELECT W.ENAME||'의 상사는 '|| M.ENAME || '다' MESSAGE
+       FROM EMP W, EMP M
+       WHERE W.MGR=M.EMPNO;
+
+   4)Outer Join : 조인 조건에 만족하지 않는 행도 나타나는 조인
+   EX) EQUI / NON EQUI / SELF 조인 조건에서 만족하지 않는 행도 출력
+   SELECT W.ENAME, W.MGR, M.EMPNO, M.ENAME
+     FROM EMP W, EMP M
+     WHERE W.MGR=M.EMPNO(+);    -> 상사가 없는 행도 출력

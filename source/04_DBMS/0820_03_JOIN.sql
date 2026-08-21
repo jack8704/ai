@@ -197,8 +197,7 @@ SELECT ENAME, JOB, SAL, DNAME
 SELECT ENAME, DNAME, LOC
     FROM EMP E, DEPT D
     WHERE E.DEPTNO = D.DEPTNO
-        AND COMM IS NOT NULL 
-        AND COMM !=0;
+        AND COMM >0;
 
 --4. 이름 중 L자가 있는 사원에 대하여 이름,업무,부서명,위치를 출력
 SELECT ENAME, JOB, DNAME, LOC

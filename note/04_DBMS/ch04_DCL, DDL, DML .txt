@@ -1,0 +1,16 @@
+4장_DCL, DDL, DML 
+ (1) DCL : 사용자 계정 생성(CREATE USER), 권한부여(GRANT), 권한박탈(REVOKE), 사용자 계정 삭제(DROP USER)
+                 트렌젝션명령어(ROLLBACK, COMMIT)
+ (2) DDL : 테이블 생성(CREATE TABLE), 테이블구조변경(ALTER TABLE). 테이블 삭제(DROP TABLE)
+ (3) DML : CRUD
+ `          입력(INSERT), 수정(UPDATE), 삭제(DELETE) - 취소(ROLLBACK)가능 
+            검색(SELECT)
+
+   -- (1) PRIMARY KEY : 테이블의 각 행을 유일한 값으로 식별하기 위한 필드
+   -- (2) FOREIGN KEY : 테이블의 열이 다른 테이블의 열을 참조
+   -- (3) NOT NULL : NULL을 포함하지 않음
+   -- (4) UNIQUE : 모든 행의 값이 유일해야함. NULL값은 허용(NULL은 여러개 가능)
+   -- (5) CHECK(조건) : 해당 조건이 만족해야 함(NULL값은 허용)
+   -- (6) DEFAULT 기본값 : 기본값 설정
+	-----PRIMARY KEY와 UNIQUE 제약조건은 오늘쪽 나열, 밑에 나열 가능
+	-----NOT NULL 제약조건은 오른쪽에 나열 (밑에는 안됨)

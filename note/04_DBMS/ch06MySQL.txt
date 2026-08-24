@@ -1,0 +1,22 @@
+6장 MySQL
+   SQL에 기반을 둔 관계형 DBMS 중 하나
+  
+  ※ ORACLE 과 차이점
+	-- DCL(계정생성, 권한부여, 권한박탈, 계정삭제)
+	     create user userid identified by 'password'; -- 계정 생성
+	     grant all privileges on *.* to userid; -- 권한 부여
+	     revoke all on *.* from userid; -- 권한 박탈
+             drop user userid; -- 계정 삭제
+	
+	-- DDL(타입, 시퀀스없음)
+            1) MySQL 자료형
+		Tinyint, smallint, int, integer, numeric(m,d), double,  
+		char, varchar, BLOB, date, datetime, timestamp, time
+		
+		auto_increment 필드타입은 int로 sequence 처럼 자동적으로 증가
+	     
+	     2) 제약조건 
+		Unique, primary key, not null, foreign key, check, 그외 제약조건은 아니나 default
+
+	-- DML(outer join, and;&&, or;||, 일부함수)
+		Query - Auto-Commit Transections체크되어 있으면 autocommit됨

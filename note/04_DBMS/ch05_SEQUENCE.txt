@@ -1,0 +1,9 @@
+5장 SEQUENCE
+   시퀀스 : 순차번호 생성기. 인위적인 PK 사용용도
+	CREATE SEQUENCE FRIEND_SEQ
+   		 START WITH 1          --- 1부터 시작 (기본값 1)
+  		  INCREMENT BY 1     ---  1씩 증가(기본값 1)
+  		  MAXVALUE 9999      ---   최대값
+  		  MINVALUE 1              ---  최소값
+  		  NOCACHE                  
+  		  NOCYCLE;

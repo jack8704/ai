@@ -1,0 +1,28 @@
+-- 회원가입 | 전체조회 | 이름찾기 | 메일삭제 | CSV내보내기 
+DROP TABLE MEMBER;
+CREATE TABLE MEMBER(
+        NAME      VARCHAR2(20),   ---가변길이 문자
+        PHONE    VARCHAR2(30),
+        EMAIL     VARCHAR2(50),
+        AGE         NUMBER(3),
+        GRADE    NUMBER(1)
+);
+DESC MEMBER ;
+SELECT * FROM MEMBER;
+
+-- 1. 회원가입
+INSERT INTO MEMBER VALUES ('홍길동', '010-9999-9999', 'HONG@NAVER', 25, 1);
+-- 2. 전체조회 / 5. CSV 내보내기
+SELECT * FROM MEMBER ORDER BY AGE;
+-- 3. 이름으로 찾기
+SELECT * FROM MEMBER WHERE NAME= '홍길동';
+-- 4. 메일로 삭제
+SELECT  NAME FROM MEMBER WHERE UPPER(EMAIL)=UPPER('HONG@NAVER');
+DELETE FROM MEMBER WHERE EMAIL ='HONG@NAVER';
+
+COMMIT;
+
+
+
+
+

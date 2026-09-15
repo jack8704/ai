@@ -1,0 +1,17 @@
+모델 개요 및 역할: OpenAI의 자동 음성 인식(ASR) 모델로, 사람의 음성 데이터를 텍스트로 정밀하게 변환 처리  
+
+제공 엔드포인트: 음성을 원어 그대로 받아적는 필사(Transcriptions) 기능과 영문으로 변환하는 번역(Translations) 기능 제공  
+
+환경 구성 및 인증: .env 파일에 OPENAI_API_KEY를 정의하고 python-dotenv로 로드하여 openai.OpenAI() 클라이언트 생성  
+
+모델 사양 및 제약사항: whisper-1(v2 대형 모델 기반)을 사용하며 MP3·WAV 등을 지원하나, 단일 요청당 파일 크기는 25MB 이하로 제한
+
+기본 호출 프로세스: client.audio.transcriptions.create 메서드에 바이너리 읽기(rb) 모드로 연 파일 객체와 모델명을 전달해 호출  
+
+언어 인식 및 지정: 90개 이상 언어 자동 감지를 지원하며, 오인식 방지를 위해 language 파라미터(예: ko, en)로 언어 코드 강제 지정 가능  
+
+출력 포맷 옵션 (response_format): 기본 json 외에 순수 문자열인 text, 영상 자막용 srt/vtt, 상세 메타데이터를 포함하는 verbose_json 지원  
+
+타임스탬프 기반 자막 생성: srt 또는 verbose_json을 적용하여 음성을 세그먼트 단위로 분할하고 구간별 시작·종료 시간을 추출  
+
+유사 실시간 처리 구현: 자체 스트리밍 엔드포인트 부재로 sounddevice로 마이크 입력을 수 초 단위로 녹음·저장 후 API로 연속 전송하는 구조 채택  

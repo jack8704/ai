@@ -1,0 +1,15 @@
+def mask_password(pw):
+  return "*"*len(pw)
+
+def mask_comma(value):  # 3자리 마다 , 추가
+  return f'{value:,}'
+
+
+if __name__=='__main__':
+  pw='abcdddddddddef'
+  print('비번:', pw)
+  print('비번:', mask_password(pw))
+  value = 1000000
+  print('value:', value)
+  print('value:', mask_comma(value))
+

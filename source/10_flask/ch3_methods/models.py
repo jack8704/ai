@@ -9,3 +9,4 @@ class Member(BaseModel):             #pydantic class 생성
 if __name__ == '__main__':
   member =Member(name="홍길", id='123', pw='aa')
   print(member)
+  

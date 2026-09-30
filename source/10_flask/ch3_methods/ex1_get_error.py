@@ -18,8 +18,17 @@ from flask import (Flask,            # 앱 객체
                   abort)            # 강제로 예외발생
 
 from models import Member
-
+from filter import mask_comma, mask_password
 app = Flask(__name__)
+
+app.template_filter('mask_pw')(mask_password)
+app.template_filter('comma')(mask_comma)
+
+# 필터링 추가
+# @app.template_filter("mask_pw")  #문자 갯수만큼 *로 변환
+# def mask_password(pw):
+#   return "*"*len(pw)
+
 
 @app.route('/')
 def index():

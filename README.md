@@ -1,10 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=AI%20모델링%20및%20LLM%20학습일지&fontSize=50)
 
-<div align="center">  
-
-**매일 1commit으로 성장하는 중** 🚀
-
-</div>
 
 ## 📌 About This Repository
 
@@ -18,7 +13,7 @@
 <details>
 <summary><H2>📋 CURRICULUM click!</h2></summary>
 <br>
-<img width="586" height="823" alt="Image" src="https://github.com/user-attachments/assets/89c534fd-0c99-41b6-9035-cf6d990194f4" />
+<img width="578" height="820" alt="Image" src="https://github.com/user-attachments/assets/16c6e26f-34b3-40f3-8452-5da45d682274" />
 </details>
 
 ##  📚 SKILLS
@@ -117,10 +112,4 @@
 ![Commits](https://img.shields.io/github/commit-activity/m/4aix/ai)
 
 ---
-
-<div align="center">
-
-**⚠️ 본 레파지토리는 교육과정 종료 후(2026.11.19) 삭제될 수 있습니다 ⚠️**
-
-</div>
 
